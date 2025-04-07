@@ -35,7 +35,7 @@ app.post('/tasks', async(req, res) => {
 
 });
 
-app.delete('/task/:id', async(req, res) => {
+app.delete('/tasks/:id', async(req, res) => {
     try{
         const task = await Task.findByIdAndDelete(req.params.id); // find the task by id and delete it
         if (!task) {
